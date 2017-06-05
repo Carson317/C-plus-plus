@@ -14,7 +14,8 @@ class Time
 		void Reset(int h = 0, int m = 0);
 		Time Sum(const Time &t)const;//常成员函数，只能调用const成员函数 ，并且该函数不能修改成员变量的值
 		Time operator+(const Time &t)const;//+操作符
-		void Show()const; 
+		void Show()const;
+		friend void operator<<(ostream os, const Time &t);
 };
 
 #endif //MYTIME0_H_
